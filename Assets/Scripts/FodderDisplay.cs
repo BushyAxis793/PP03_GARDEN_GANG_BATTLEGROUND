@@ -21,6 +21,11 @@ public class FodderDisplay : MonoBehaviour
         fodderText.text = fodder.ToString();
     }
 
+    public bool HaveEnoughFodder(int amount)
+    {
+        return fodder >= amount;
+    }
+
     public void AddFodder(int amount)
     {
         fodder += amount;

@@ -7,12 +7,23 @@ public class DefenderSpawner : MonoBehaviour
     [SerializeField] DefenderController defender;
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquareClicked());
+        TryToPlaceDefender(GetSquareClicked());
     }
 
     public void SetDefenderFromUI(DefenderController selectedDefender)
     {
         defender = selectedDefender;
+    }
+
+    private void TryToPlaceDefender(Vector2 gridPos)
+    {
+        var FodderDisplay = FindObjectOfType<FodderDisplay>();
+        var defenderCost = defender.GetFodderCost();
+        if (FodderDisplay.HaveEnoughFodder(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            FodderDisplay.ReduceFodder(defenderCost);
+        }
     }
 
     private Vector2 GetSquareClicked()
