@@ -22,6 +22,8 @@ public class EnemySpawnController : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, transform.position, transform.rotation);
+        EnemyController newEnemy =  Instantiate(enemyPrefab, transform.position, transform.rotation) as EnemyController;
+
+        newEnemy.transform.parent = transform;
     }
 }
