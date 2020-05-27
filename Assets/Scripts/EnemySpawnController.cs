@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class EnemySpawnController : MonoBehaviour
 {
     [SerializeField] float minSpawnTime = 1f;
     [SerializeField] float maxSpawnTime = 1f;
-    [SerializeField] EnemyController enemyPrefab;
+    [SerializeField] EnemyController[] enemyPrefabArray;
 
     bool spawn = true;
 
@@ -15,14 +13,20 @@ public class EnemySpawnController : MonoBehaviour
     {
         while (spawn)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(minSpawnTime, maxSpawnTime));
+            yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
             SpawnEnemy();
         }
     }
 
     private void SpawnEnemy()
     {
-        EnemyController newEnemy =  Instantiate(enemyPrefab, transform.position, transform.rotation) as EnemyController;
+        var enemyIndex = Random.Range(0, enemyPrefabArray.Length);
+        Spawn(enemyPrefabArray[enemyIndex]);
+    }
+
+    private void Spawn(EnemyController enemy)
+    {
+        EnemyController newEnemy = Instantiate(enemy, transform.position, transform.rotation) as EnemyController;
 
         newEnemy.transform.parent = transform;
     }

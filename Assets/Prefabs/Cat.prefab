@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3987529749082990232}
   - component: {fileID: -3876587379716261668}
   - component: {fileID: 1512132625663901768}
+  - component: {fileID: -6143648302257329792}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -128,7 +129,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.051866412, y: -0.042713523}
@@ -180,6 +181,18 @@ MonoBehaviour:
   health: 100
   deathVFX: {fileID: 5446729652060901859, guid: f27a7dfc1e35d744292bc8dedbbd4608,
     type: 3}
+--- !u!114 &-6143648302257329792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056456964053705183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1492b6c41ef8a4bb1a7369dc1c1332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3056456964756111061
 GameObject:
   m_ObjectHideFlags: 0
