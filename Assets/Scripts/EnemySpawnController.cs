@@ -18,6 +18,11 @@ public class EnemySpawnController : MonoBehaviour
         }
     }
 
+    public void StopSpawnEnemy()
+    {
+        spawn = false;
+    }
+
     private void SpawnEnemy()
     {
         var enemyIndex = Random.Range(0, enemyPrefabArray.Length);
