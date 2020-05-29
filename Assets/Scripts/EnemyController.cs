@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<GameController>().EnemySpawn();
+        FindObjectOfType<GameController>().EnemySpawned();
     }
 
     private void OnDestroy()

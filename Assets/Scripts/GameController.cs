@@ -8,14 +8,16 @@ public class GameController : MonoBehaviour
     int numberOfEnemies = 0;
     bool timerFinished = false;
     [SerializeField] GameObject winLabel;
+    [SerializeField] GameObject loseLabel;
     [SerializeField] float waitForLoad = 4f;
 
     private void Start()
     {
         winLabel.SetActive(false);
+        loseLabel.SetActive(false);
     }
 
-    public void EnemySpawn()
+    public void EnemySpawned()
     {
         numberOfEnemies++;
     }
@@ -34,6 +36,12 @@ public class GameController : MonoBehaviour
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(waitForLoad);
         FindObjectOfType<LevelLoader>().LoadNextScene();
+    }
+
+    public void HandleLoseCondition()
+    {
+        loseLabel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void TimerFinished()

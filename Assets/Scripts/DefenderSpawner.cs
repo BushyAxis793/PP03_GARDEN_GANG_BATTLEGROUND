@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] DefenderController defender;
+    DefenderController defender;
     private void OnMouseDown()
     {
         TryToPlaceDefender(GetSquareClicked());
