@@ -6,14 +6,17 @@ using UnityEngine;
 
 public class LivesDisplay : MonoBehaviour
 {
-    [SerializeField] int lives = 5;
+    float lives;
+    [SerializeField] float baseLives = 3;
     [SerializeField] int damage = 1;
     TextMeshProUGUI livesText;
 
     private void Start()
     {
+        lives = baseLives - PlayerPrefsController.GetDifficulty();
         livesText = GetComponent<TextMeshProUGUI>();
         UpdateDisplay();
+        Debug.Log(PlayerPrefsController.GetDifficulty());
     }
 
     private void UpdateDisplay()

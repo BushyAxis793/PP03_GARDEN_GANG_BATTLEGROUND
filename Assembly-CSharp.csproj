@@ -73,6 +73,8 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\MusicPlayer.cs" />
+    <Compile Include="Assets\OptionsController.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\DefenderController.cs" />
     <Compile Include="Assets\Scripts\DefenderSpawner.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LivesDisplay.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefsController.cs" />
     <Compile Include="Assets\Scripts\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\ShootController.cs" />
     <Compile Include="Assets\Scripts\SpawnButton.cs" />
