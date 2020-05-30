@@ -9,11 +9,23 @@ public class ShootController : MonoBehaviour
 
     EnemySpawnController myRowSpawner;
 
+    GameObject projectileParent;
+    const string PROJECTILE_PARENT = "Projectile";
+
     private void Start()
     {
         SetRowSpawner();
+        CreateProjectileParent();
     }
 
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find(PROJECTILE_PARENT);
+        if (!projectileParent)
+        {
+            projectileParent = new GameObject(PROJECTILE_PARENT);
+        }
+    }
 
     private void Update()
     {
@@ -29,7 +41,8 @@ public class ShootController : MonoBehaviour
 
     public void Throw()
     {
-        Instantiate(bonePrefab, bonePosition.transform.position, transform.rotation);
+        GameObject newProjectile = Instantiate(bonePrefab, bonePosition.transform.position, transform.rotation) as GameObject;
+        newProjectile.transform.parent = projectileParent.transform;
     }
 
     private bool IsEnemyInRow()

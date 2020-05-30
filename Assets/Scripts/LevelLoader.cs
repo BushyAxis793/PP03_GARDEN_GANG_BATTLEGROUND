@@ -44,6 +44,7 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Start Screen");
+        Debug.Log(PlayerPrefsController.GetDifficulty());
     }
 
     public void LoadOptionsScreen()

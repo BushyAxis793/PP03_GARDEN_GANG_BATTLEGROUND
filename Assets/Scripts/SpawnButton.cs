@@ -1,10 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnButton : MonoBehaviour
 {
     [SerializeField] DefenderController prefab;
+
+
+    private void Start()
+    {
+        CostLabel();
+    }
+
+    private void CostLabel()
+    {
+        Text costText = GetComponentInChildren<Text>();
+        if (!costText)
+        {
+            Debug.LogError(name + "no cos text");
+        }
+        else
+        {
+            costText.text = prefab.GetFodderCost().ToString();
+        }
+    }
 
     private void OnMouseDown()
     {
