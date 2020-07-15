@@ -31,7 +31,6 @@ public class TimerDisplay : MonoBehaviour
         {
             FindObjectOfType<GameController>().TimerFinished();
             triggerLevelFinished = true;
-            Debug.Log("end level");
         }
     }
 

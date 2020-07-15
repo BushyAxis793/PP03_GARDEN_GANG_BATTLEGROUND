@@ -16,7 +16,6 @@ public class LivesDisplay : MonoBehaviour
         lives = baseLives - PlayerPrefsController.GetDifficulty();
         livesText = GetComponent<TextMeshProUGUI>();
         UpdateDisplay();
-        Debug.Log(PlayerPrefsController.GetDifficulty());
     }
 
     private void UpdateDisplay()

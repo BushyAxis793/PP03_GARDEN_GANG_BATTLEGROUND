@@ -23,7 +23,7 @@ public class PlayerPrefsController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Volume is out of range");
+            //DO NOTHING
         }
     }
     public static float GetVolume()
@@ -39,7 +39,7 @@ public class PlayerPrefsController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Difficulty out of range");
+            //DO NOTHING
         }
     }
 

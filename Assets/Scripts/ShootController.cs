@@ -27,17 +27,6 @@ public class ShootController : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (IsEnemyInRow())
-        {
-            Debug.Log("shoot");
-        }
-        else
-        {
-            Debug.Log("wait");
-        }
-    }
 
     public void Throw()
     {
@@ -45,17 +34,6 @@ public class ShootController : MonoBehaviour
         newProjectile.transform.parent = projectileParent.transform;
     }
 
-    private bool IsEnemyInRow()
-    {
-        if (myRowSpawner.transform.childCount <= 0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
     private void SetRowSpawner()
     {
         EnemySpawnController[] spawners = FindObjectsOfType<EnemySpawnController>();

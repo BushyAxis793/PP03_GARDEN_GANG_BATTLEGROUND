@@ -19,7 +19,7 @@ public class SpawnButton : MonoBehaviour
         Text costText = GetComponentInChildren<Text>();
         if (!costText)
         {
-            Debug.LogError(name + "no cos text");
+            //DO NOTHING
         }
         else
         {
