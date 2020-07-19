@@ -9,12 +9,20 @@ public class GameController : MonoBehaviour
     bool timerFinished = false;
     [SerializeField] GameObject winLabel;
     [SerializeField] GameObject loseLabel;
+    [SerializeField] GameObject pauseLabel;
     [SerializeField] float waitForLoad = 4f;
+
+    bool isPaused;
 
     private void Start()
     {
         winLabel.SetActive(false);
         loseLabel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        PauseGame();
     }
 
     public void EnemySpawned()
@@ -41,6 +49,7 @@ public class GameController : MonoBehaviour
     public void HandleLoseCondition()
     {
         loseLabel.SetActive(true);
+        GameObject.Find("Game UI").SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -56,6 +65,25 @@ public class GameController : MonoBehaviour
         foreach (EnemySpawnController spawner in spawnerArray)
         {
             spawner.StopSpawnEnemy();
+        }
+    }
+
+    private void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+
+            if (isPaused)
+            {
+                Time.timeScale = 0;
+                pauseLabel.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pauseLabel.SetActive(false);
+            }
         }
     }
 }

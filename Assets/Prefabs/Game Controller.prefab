@@ -156,4 +156,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winLabel: {fileID: 0}
   loseLabel: {fileID: 0}
+  pauseLabel: {fileID: 0}
   waitForLoad: 4
