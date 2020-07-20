@@ -386,7 +386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You unlocked Fodder hose!
+  m_text: You unlocked Fodder house!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ad08bf1e2ea5ba4298ce6731572371a, type: 2}
   m_sharedMaterial: {fileID: 7128113157354744308, guid: 3ad08bf1e2ea5ba4298ce6731572371a,
@@ -887,9 +887,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
         type: 3}
+      propertyPath: enemyPrefabArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
       propertyPath: minSpawnTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
+      propertyPath: enemyPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 4216595401756390262, guid: 2f7559b9399a05e498006e6794403205,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0a5967c03189c409eb090ece28626f, type: 3}
 --- !u!1001 &5360405345830858963
@@ -1366,7 +1377,7 @@ PrefabInstance:
     - target: {fileID: 1704101814676659080, guid: b5eeaf66b97e03b438d25b485c75a608,
         type: 3}
       propertyPath: baseLives
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5859934648102457217, guid: b5eeaf66b97e03b438d25b485c75a608,
         type: 3}

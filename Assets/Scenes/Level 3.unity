@@ -320,6 +320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
         type: 3}
+      propertyPath: enemyPrefabArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 4216595401756390262, guid: 0d955b2317016654c94536108751aa5e,
@@ -334,6 +339,12 @@ PrefabInstance:
       propertyPath: minSpawnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
+      propertyPath: enemyPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 4216595401756390262, guid: 2f7559b9399a05e498006e6794403205,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0a5967c03189c409eb090ece28626f, type: 3}
 --- !u!4 &289127703 stripped
@@ -411,6 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
         type: 3}
+      propertyPath: enemyPrefabArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
       propertyPath: maxSpawnTime
       value: 6
       objectReference: {fileID: 0}
@@ -419,6 +435,12 @@ PrefabInstance:
       propertyPath: minSpawnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
+      propertyPath: enemyPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 4216595401756390262, guid: 2f7559b9399a05e498006e6794403205,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0a5967c03189c409eb090ece28626f, type: 3}
 --- !u!4 &611912287 stripped
@@ -712,6 +734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
         type: 3}
+      propertyPath: enemyPrefabArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 4216595401756390262, guid: 0d955b2317016654c94536108751aa5e,
@@ -726,6 +753,12 @@ PrefabInstance:
       propertyPath: minSpawnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
+      propertyPath: enemyPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 4216595401756390262, guid: 2f7559b9399a05e498006e6794403205,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0a5967c03189c409eb090ece28626f, type: 3}
 --- !u!4 &2045955737 stripped
@@ -809,6 +842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
         type: 3}
+      propertyPath: enemyPrefabArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
       propertyPath: maxSpawnTime
       value: 6
       objectReference: {fileID: 0}
@@ -817,6 +855,12 @@ PrefabInstance:
       propertyPath: minSpawnTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4020194707162407527, guid: bf0a5967c03189c409eb090ece28626f,
+        type: 3}
+      propertyPath: enemyPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 4216595401756390262, guid: 2f7559b9399a05e498006e6794403205,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0a5967c03189c409eb090ece28626f, type: 3}
 --- !u!1001 &5360405345830858963

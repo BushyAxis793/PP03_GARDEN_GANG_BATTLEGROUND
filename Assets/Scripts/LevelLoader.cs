@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
@@ -17,7 +18,10 @@ public class LevelLoader : MonoBehaviour
             StartCoroutine(WaitForTime());
         }
     }
-
+    private void Update()
+    {
+        print(currentSceneIndex);
+    }
     IEnumerator WaitForTime()
     {
         yield return new WaitForSeconds(waitInSeconds);
@@ -37,7 +41,8 @@ public class LevelLoader : MonoBehaviour
     public void RestartScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentSceneIndex);
+        //SceneManager.LoadScene(currentSceneIndex);
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     public void LoadMainMenu()
