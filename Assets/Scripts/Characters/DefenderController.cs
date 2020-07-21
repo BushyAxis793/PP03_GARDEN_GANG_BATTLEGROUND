@@ -10,7 +10,6 @@ public class DefenderController : MonoBehaviour
     {
         FindObjectOfType<FodderDisplay>().AddFodder(amount);
     }
-
     public int GetFodderCost()
     {
         return fodderCost;

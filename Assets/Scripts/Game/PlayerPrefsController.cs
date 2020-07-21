@@ -18,7 +18,6 @@ public class PlayerPrefsController : MonoBehaviour
     {
         if (volume >= MIN_VOLUME && volume <= MAX_VOLUME)
         {
-
             PlayerPrefs.SetFloat(VOLUME_KEY, volume);
         }
         else
@@ -30,7 +29,6 @@ public class PlayerPrefsController : MonoBehaviour
     {
         return PlayerPrefs.GetFloat(VOLUME_KEY);
     }
-
     public static void SetDifficulty(float diff)
     {
         if (diff >= MIN_DIFF && diff <= MAX_DIFF)
@@ -42,10 +40,8 @@ public class PlayerPrefsController : MonoBehaviour
             //DO NOTHING
         }
     }
-
     public static float GetDifficulty()
     {
         return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
     }
-
 }

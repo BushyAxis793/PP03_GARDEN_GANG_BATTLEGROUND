@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class LivesDisplay : MonoBehaviour
 {
-    float lives;
     [SerializeField] float baseLives = 3;
     [SerializeField] int damage = 1;
     TextMeshProUGUI livesText;
+
+    float lives;
 
     private void Start()
     {
@@ -17,12 +18,10 @@ public class LivesDisplay : MonoBehaviour
         livesText = GetComponent<TextMeshProUGUI>();
         UpdateDisplay();
     }
-
     private void UpdateDisplay()
     {
         livesText.text = lives.ToString();
     }
-
     public void ReduceLives()
     {
         lives -= damage;

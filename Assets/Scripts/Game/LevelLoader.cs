@@ -18,45 +18,34 @@ public class LevelLoader : MonoBehaviour
             StartCoroutine(WaitForTime());
         }
     }
-    private void Update()
-    {
-        print(currentSceneIndex);
-    }
     IEnumerator WaitForTime()
     {
         yield return new WaitForSeconds(waitInSeconds);
         LoadNextScene();
     }
-
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-
     public void LoadLoseScreen()
     {
         SceneManager.LoadScene("Lose Screen");
     }
-
     public void RestartScene()
     {
         Time.timeScale = 1;
-        //SceneManager.LoadScene(currentSceneIndex);
         Application.LoadLevel(Application.loadedLevel);
     }
-
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Start Screen");
         Debug.Log(PlayerPrefsController.GetDifficulty());
     }
-
     public void LoadOptionsScreen()
     {
         SceneManager.LoadScene("Options Screen");
     }
-
     public void QuitGame()
     {
         Application.Quit();

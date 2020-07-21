@@ -12,7 +12,6 @@ public class ProjectileController : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
-
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
         var health = otherCollider.GetComponent<Health>();
@@ -23,8 +22,5 @@ public class ProjectileController : MonoBehaviour
             health.TakeDamage(damage);
             Destroy(gameObject);
         }
-
     }
-
-
 }

@@ -7,17 +7,16 @@ public class ShootController : MonoBehaviour
 {
     [SerializeField] GameObject bonePrefab, bonePosition;
 
-    EnemySpawnController myRowSpawner;
-
-    GameObject projectileParent;
     const string PROJECTILE_PARENT = "Projectile";
+
+    EnemySpawnController myRowSpawner;
+    GameObject projectileParent;
 
     private void Start()
     {
         SetRowSpawner();
         CreateProjectileParent();
     }
-
     private void CreateProjectileParent()
     {
         projectileParent = GameObject.Find(PROJECTILE_PARENT);
@@ -26,14 +25,11 @@ public class ShootController : MonoBehaviour
             projectileParent = new GameObject(PROJECTILE_PARENT);
         }
     }
-
-
     public void Throw()
     {
         GameObject newProjectile = Instantiate(bonePrefab, bonePosition.transform.position, transform.rotation) as GameObject;
         newProjectile.transform.parent = projectileParent.transform;
     }
-
     private void SetRowSpawner()
     {
         EnemySpawnController[] spawners = FindObjectsOfType<EnemySpawnController>();

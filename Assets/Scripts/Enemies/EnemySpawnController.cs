@@ -17,18 +17,15 @@ public class EnemySpawnController : MonoBehaviour
             SpawnEnemy();
         }
     }
-
     public void StopSpawnEnemy()
     {
         spawn = false;
     }
-
     private void SpawnEnemy()
     {
         var enemyIndex = Random.Range(0, enemyPrefabArray.Length);
         Spawn(enemyPrefabArray[enemyIndex]);
     }
-
     private void Spawn(EnemyController enemy)
     {
         EnemyController newEnemy = Instantiate(enemy, transform.position, transform.rotation) as EnemyController;

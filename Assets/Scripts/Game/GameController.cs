@@ -5,26 +5,25 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    int numberOfEnemies = 0;
-    bool timerFinished = false;
+
     [SerializeField] GameObject winLabel;
     [SerializeField] GameObject loseLabel;
     [SerializeField] GameObject pauseLabel;
     [SerializeField] float waitForLoad = 4f;
 
     bool isPaused;
+    bool timerFinished = false;
+    int numberOfEnemies = 0;
 
     private void Start()
     {
         winLabel.SetActive(false);
         loseLabel.SetActive(false);
     }
-
     private void Update()
     {
         PauseGame();
     }
-
     public void EnemySpawned()
     {
         numberOfEnemies++;
@@ -37,7 +36,6 @@ public class GameController : MonoBehaviour
             StartCoroutine(HandleWinCondition());
         }
     }
-
     IEnumerator HandleWinCondition()
     {
         winLabel.SetActive(true);
@@ -45,20 +43,17 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(waitForLoad);
         FindObjectOfType<LevelLoader>().LoadNextScene();
     }
-
     public void HandleLoseCondition()
     {
         loseLabel.SetActive(true);
         GameObject.Find("Game UI").SetActive(false);
         Time.timeScale = 0;
     }
-
     public void TimerFinished()
     {
         timerFinished = true;
         StopSpawners();
     }
-
     private void StopSpawners()
     {
         EnemySpawnController[] spawnerArray = FindObjectsOfType<EnemySpawnController>();
@@ -67,7 +62,6 @@ public class GameController : MonoBehaviour
             spawner.StopSpawnEnemy();
         }
     }
-
     private void PauseGame()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

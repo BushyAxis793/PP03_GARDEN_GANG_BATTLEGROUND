@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void PlayDeathVFX()
     {
         if (!deathVFX)

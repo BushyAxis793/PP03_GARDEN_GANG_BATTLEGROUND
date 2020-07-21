@@ -15,23 +15,19 @@ public class FodderDisplay : MonoBehaviour
         fodderText = GetComponent<TextMeshProUGUI>();
         UpdateFodderText();
     }
-
     private void UpdateFodderText()
     {
         fodderText.text = fodder.ToString();
     }
-
     public bool HaveEnoughFodder(int amount)
     {
         return fodder >= amount;
     }
-
     public void AddFodder(int amount)
     {
         fodder += amount;
         UpdateFodderText();
     }
-
     public void ReduceFodder(int amount)
     {
         if (fodder >= amount)

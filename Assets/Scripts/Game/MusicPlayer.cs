@@ -21,7 +21,6 @@ public class MusicPlayer : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefsController.GetVolume();
     }
-
     public void SetVolume(float volume)
     {
         audioSource.volume = volume;

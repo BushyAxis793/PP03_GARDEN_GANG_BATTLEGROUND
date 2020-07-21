@@ -13,7 +13,6 @@ public class SpawnButton : MonoBehaviour
     {
         CostLabel();
     }
-
     private void CostLabel()
     {
         Text costText = GetComponentInChildren<Text>();
@@ -26,13 +25,11 @@ public class SpawnButton : MonoBehaviour
             costText.text = prefab.GetFodderCost().ToString();
         }
     }
-
     private void OnMouseDown()
     {
         var buttons = FindObjectsOfType<SpawnButton>();
         foreach (SpawnButton button in buttons)
         {
-
             button.GetComponent<SpriteRenderer>().color = new Color32(41, 41, 41, 255);
         }
 

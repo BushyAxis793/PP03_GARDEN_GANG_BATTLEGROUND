@@ -8,15 +8,15 @@ using UnityEngine.UI;
 public class TimerDisplay : MonoBehaviour
 {
     [SerializeField] float timerStart = 60f;
-    float timerRounded;
     TextMeshProUGUI timerText;
+
+    float timerRounded;
     bool triggerLevelFinished = false;
 
     private void Start()
     {
         timerText = GetComponent<TextMeshProUGUI>();
     }
-
     private void Update()
     {
         if (triggerLevelFinished)
@@ -33,7 +33,6 @@ public class TimerDisplay : MonoBehaviour
             triggerLevelFinished = true;
         }
     }
-
     private void UpdateDisplay()
     {
         timerText.text = timerRounded.ToString();

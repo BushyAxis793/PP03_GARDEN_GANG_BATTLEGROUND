@@ -16,7 +16,6 @@ public class OptionsController : MonoBehaviour
         volumeSlider.value = PlayerPrefsController.GetVolume();
         diffSlider.value = PlayerPrefsController.GetDifficulty();
     }
-
     private void Update()
     {
         var musicPlayer = FindObjectOfType<MusicPlayer>();
@@ -29,15 +28,12 @@ public class OptionsController : MonoBehaviour
             Debug.LogWarning("No music player found");
         }
     }
-
     public void SaveSettings()
     {
         PlayerPrefsController.SetVolume(volumeSlider.value);
         PlayerPrefsController.SetDifficulty(diffSlider.value);
         FindObjectOfType<LevelLoader>().LoadMainMenu();
-
     }
-
     public void SetDefaults()
     {
         volumeSlider.value = defaultVolume;
