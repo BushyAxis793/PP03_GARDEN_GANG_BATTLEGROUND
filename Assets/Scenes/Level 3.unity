@@ -1168,7 +1168,7 @@ PrefabInstance:
     - target: {fileID: 5859934648102457217, guid: b5eeaf66b97e03b438d25b485c75a608,
         type: 3}
       propertyPath: fodder
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7167975117270108013, guid: b5eeaf66b97e03b438d25b485c75a608,
         type: 3}

@@ -23,6 +23,11 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(waitInSeconds);
         LoadNextScene();
     }
+
+    private void Update()
+    {
+        BackToMainScreen();
+    }
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
@@ -49,5 +54,18 @@ public class LevelLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void BackToMainScreen()
+    {
+        if (SceneManager.GetActiveScene().name == "Final Screen")
+        {
+            StartCoroutine(LoadFirstScene());
+        }
+    }
+
+    IEnumerator LoadFirstScene()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(0);
     }
 }
