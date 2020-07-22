@@ -1259,6 +1259,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1099181937, guid: b5eeaf66b97e03b438d25b485c75a608, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 798.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099181937, guid: b5eeaf66b97e03b438d25b485c75a608, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099181938, guid: b5eeaf66b97e03b438d25b485c75a608, type: 3}
+      propertyPath: m_margin.z
+      value: 0.7147217
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099181938, guid: b5eeaf66b97e03b438d25b485c75a608, type: 3}
+      propertyPath: m_margin.x
+      value: 0.7145691
+      objectReference: {fileID: 0}
     - target: {fileID: 1099181940, guid: b5eeaf66b97e03b438d25b485c75a608, type: 3}
       propertyPath: timerStart
       value: 30
